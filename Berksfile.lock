@@ -3,7 +3,8 @@ DEPENDENCIES
     path: .
     metadata: true
   systemd
-    path: ../chef-systemd
+    git: git://github.com/gregf/chef-systemd.git
+    revision: 6297c79725a4feb06885519c737b0f456c03a2c4
 
 GRAPH
   7dtd (0.1.0)
