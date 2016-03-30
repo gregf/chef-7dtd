@@ -10,6 +10,7 @@ platforms:
     sudo: false
   busser:
     sudo: false
+- name: ubuntu-15.10
 suites:
   - name: default
     run_list:
