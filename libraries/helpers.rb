@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: minecraft
+# Cookbook Name:: 7dtd
 # Libraries:: helpers
 #
-# Copyright (c) 2014, Greg Fitzgerald <greg@gregf.org>
+# Copyright (c) 2016, Greg Fitzgerald <greg@gregf.org>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

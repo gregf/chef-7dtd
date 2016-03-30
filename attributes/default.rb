@@ -2,7 +2,7 @@
 # Cookbook Name:: 7dtd
 # Attributes:: default
 #
-# Copyright 2013, Greg Fitzgerald.
+# Copyright 2016, Greg Fitzgerald.
 #
 # Licensed under the Apache License, Version 2.0 (the 'License');
 # you may not use this file except in compliance with the License.
