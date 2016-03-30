@@ -1,13 +1,13 @@
-# Minecraft
-[![Build Status](https://travis-ci.org/gregf/chef-minecraft.svg?branch=master)](https://travis-ci.org/gregf/chef-minecraft)
-[![Cookbook Version](https://img.shields.io/cookbook/v/minecraft.svg)](https://supermarket.chef.io/cookbooks/minecraft)
+# 7dtd
+[![Build Status](https://travis-ci.org/gregf/chef-7dtd.svg?branch=master)](https://travis-ci.org/gregf/chef-7dtd)
+[![Cookbook Version](https://img.shields.io/cookbook/v/7dtd.svg)](https://supermarket.chef.io/cookbooks/7dtd)
 
 ## Description
 
-Installs and configures a [Minecraft](http://www.minecraft.net) server.
+Installs and configures a [7dtd](http://www.7dtd.net) server.
 
-* Opscode Community Site: http://community.opscode.com/cookbooks/minecraft
-* Source Code: http://github.com/gregf/cookbook-minecraft
+* Opscode Community Site: http://community.opscode.com/cookbooks/7dtd
+* Source Code: http://github.com/gregf/cookbook-7dtd
 
 ## Requirements
 
@@ -17,96 +17,54 @@ Tested on chef 11
 
 ### Cookbooks
 
-* [java](http://community.opscode.com/cookbooks/java)
-* [runit](http://community.opscode.com/cookbooks/runit)
+* [systemd](https://supermarket.chef.io/cookbooks/systemd)
 
 ### Platforms
 
-* Debian 6+
-* Ubuntu 12.04+
-* Centos 6.4+
+* Debian 8+
+* Ubuntu 15.04+
 
 ## Recipes
 
 ### default
 
-The default recipe ensures a vanilla minecraft is installed, and configured based on attributes you have specified.
+The default recipe ensures a 7dtd server is installed, and configured based on
+attributes you have specified.
 
 ### user
 
-The user recipe is called by default, and creates a new user/group `mcserver` for the server to run as.
+The user recipe is called by default, and creates a new user/group `7dtd` for
+the server to run as.
 
 ### service
 
-The service recipe enables the runit service for minecraft.
+The service recipe enables the systemd service for 7dtd.
 
 ## Attributes
 
 ### Default
 
-* `minecraft['user']`
-  - The user the minecraft server runs under, default `mcserver`
+* `7dtd['user']`
+  - The user the 7dtd server runs under, default `mcserver`
 
-* `minecraft['group']`
-  - The group the minecraft server runs under, default `mcserver`
+* `7dtd['group']`
+  - The group the 7dtd server runs under, default `mcserver`
 
-* `minecraft['install_dir']`
-  - The default location minecraft is installed to, default `/srv/minecraft`
+* `7dtd['install_dir']`
+  - The default location 7dtd is installed to, default `/srv/7dtd`
 
-* `minecraft['url']`
-  - The url to fetch minecarft releases from, default `https://s3.amazonaws.com/Minecraft.Download/versions`
+* `7dtd['steamcmd_url']`
+  - The url to fetch steamcmd releases from, default
+    `https://s3.amazonaws.com/7dtd.Download/versions`
 
-* `minecraft['checksum']`
-  - The sha256 checksum of minecraft_server.jar
+* `7dtd['checksum']`
+  - The sha256 checksum of 7dtd_server.jar
 
-* `minecraft['xms']`
-  - The minimum ammount of ram java allow minecraft to consume, defaults to %40 of your total memory.
+### ServerConfig
 
-* `minecraft['xmx']`
-  - The maximum ammount of ram java allow minecraft to consume, defaults to %60 of your total memory.
-
-* `minecraft['java-options']`
-  - You can use this to pass additional options to java, default blank
-
-* `minecraft['init_style']`
-  - Currently only runit is support. default `runit`
-
-* `minecraft['banned-ips']`
-  - An array of ips you would like banned, default blank
-
-* `minecraft['banned-players']`
-  - An array of players you would like banned, default blank
-
-* `minecraft['white-list]`
-  - An array of users you would like to white-list, default blank
-
-* `minecraft['ops']`
-  - An array of admins, default blank
-
-* `minecraft['accept_eula']`
-  - Boolean whether to accept the EULA, required for [Minecraft 1.7.10](https://account.mojang.com/documents/minecraft_eula) (a Reddit thread with
-    more information [is here](http://www.reddit.com/r/admincraft/comments/27dy0q/1710_forces_you_to_accept_the_eula_before_you_can/)). The default
-    is false. It must be set to true (meaning you are consciously acknowledging and accepting the agreement) for the server to start.
-
-### Properties
-
-You can can customize any of the settings from server.properties. They are kept up to date with upstream and you can read about each setting in more
-detail [here](http://minecraft.gamepedia.com/Server.properties#Minecraft_server_properties)
-
-### Known issues
-
-Minecraft internally regenerates all of its configuration files every startup. The order of server.properties sometimes changes, timestamps are
-and headers are injected into all the configuration files.
-
-This in turn causes chef to notice configuration files have been changed and will automatically restart the server again to pick up those changes. This may
-cause your server to restart frequently, without notice.
-
-This leaves you with two work arounds for now.
-
-1. Only run chef-client once a day or manually as  you need to.
-2. Set minecraft['autorestart'] = false and restart minecraft manually when you make configuration changes.
-
-I am hoping I can get this changed upstream. I will attempt to come up with a better work around in the mean time.
+You can can customize any of the settings from serverconfig.xml. They are kept
+up to date with upstream and you can read about each setting in more detail
+[here](http://7daystodie.gamepedia.com/Server:_serverconfig.xml)
 
 ## Contributing
 
@@ -119,9 +77,8 @@ I am hoping I can get this changed upstream. I will attempt to come up with a be
 ## License
 
 Author: Greg Fitzgerald <greg@gregf.org>
-Author: Sean Escriva <sean.escriva@gmail.com>
 
-Copyright 2013, Greg Fitzgerald.
+Copyright 2016, Greg Fitzgerald.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
