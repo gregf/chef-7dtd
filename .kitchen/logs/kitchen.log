@@ -1,0 +1,19 @@
+E, [2016-03-30T11:02:17.412432 #422] ERROR -- Kitchen: ------Exception-------
+E, [2016-03-30T11:02:17.412512 #422] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2016-03-30T11:02:17.412533 #422] ERROR -- Kitchen: Message: Instance <default-debian-82> has not yet been created
+E, [2016-03-30T11:02:17.412552 #422] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-03-30T11:02:17.412569 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:209:in `login'
+E, [2016-03-30T11:02:17.412587 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/command/login.rb:39:in `call'
+E, [2016-03-30T11:02:17.412604 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-03-30T11:02:17.412621 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/cli.rb:234:in `login'
+E, [2016-03-30T11:02:17.412638 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-03-30T11:02:17.412654 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-03-30T11:02:17.412671 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/cli.rb:321:in `invoke_task'
+E, [2016-03-30T11:02:17.412688 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-03-30T11:02:17.412705 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-03-30T11:02:17.412722 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-03-30T11:02:17.412738 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/errors.rb:154:in `with_friendly_errors'
+E, [2016-03-30T11:02:17.412755 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/bin/kitchen:13:in `<top (required)>'
+E, [2016-03-30T11:02:17.412771 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/bin/kitchen:22:in `load'
+E, [2016-03-30T11:02:17.412787 #422] ERROR -- Kitchen: /home/gregf/.bundles/gregf/bin/kitchen:22:in `<main>'
+E, [2016-03-30T11:02:17.412804 #422] ERROR -- Kitchen: ----------------------

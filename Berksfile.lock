@@ -1,0 +1,13 @@
+DEPENDENCIES
+  7dtd
+    path: .
+    metadata: true
+  systemd
+    path: ../chef-systemd
+
+GRAPH
+  7dtd (0.1.0)
+    apt (>= 0.0.0)
+    systemd (>= 0.0.0)
+  apt (3.0.0)
+  systemd (2.0.0)

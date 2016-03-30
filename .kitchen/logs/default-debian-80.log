@@ -1,0 +1,36 @@
+I, [2016-03-28T10:18:52.375624 #8058]  INFO -- default-debian-80: -----> Cleaning up any prior instances of <default-debian-80>
+I, [2016-03-28T10:18:52.375765 #8058]  INFO -- default-debian-80: -----> Destroying <default-debian-80>...
+I, [2016-03-28T10:18:52.376351 #8058]  INFO -- default-debian-80: Finished destroying <default-debian-80> (0m0.00s).
+I, [2016-03-28T10:18:52.376511 #8058]  INFO -- default-debian-80: -----> Testing <default-debian-80>
+I, [2016-03-28T10:18:52.376587 #8058]  INFO -- default-debian-80: -----> Creating <default-debian-80>...
+E, [2016-03-28T10:18:53.149244 #8058] ERROR -- default-debian-80: Create failed on instance <default-debian-80>.
+E, [2016-03-28T10:18:53.149832 #8058] ERROR -- default-debian-80: ------Exception-------
+E, [2016-03-28T10:18:53.149870 #8058] ERROR -- default-debian-80: Class: DropletKit::FailedCreate
+E, [2016-03-28T10:18:53.149889 #8058] ERROR -- default-debian-80: Message: You specified an invalid image for Droplet creation.
+E, [2016-03-28T10:18:53.149911 #8058] ERROR -- default-debian-80: ------Backtrace-------
+E, [2016-03-28T10:18:53.149933 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/droplet_kit-1.4.0/lib/droplet_kit/mappings/error_mapping.rb:16:in `fail_with'
+E, [2016-03-28T10:18:53.149954 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/droplet_kit-1.4.0/lib/droplet_kit/resources/droplet_resource.rb:18:in `block (3 levels) in <class:DropletResource>'
+E, [2016-03-28T10:18:53.149975 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/resource_kit-0.1.5/lib/resource_kit/action_invoker.rb:19:in `instance_exec'
+E, [2016-03-28T10:18:53.149995 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/resource_kit-0.1.5/lib/resource_kit/action_invoker.rb:19:in `handle_response'
+E, [2016-03-28T10:18:53.150015 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/resource_kit-0.1.5/lib/resource_kit/action_invoker.rb:14:in `call'
+E, [2016-03-28T10:18:53.150036 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/resource_kit-0.1.5/lib/resource_kit/method_factory.rb:16:in `block in method_for_action'
+E, [2016-03-28T10:18:53.150056 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/kitchen-digitalocean-0.9.5/lib/kitchen/driver/digitalocean.rb:145:in `create_server'
+E, [2016-03-28T10:18:53.150075 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/kitchen-digitalocean-0.9.5/lib/kitchen/driver/digitalocean.rb:54:in `create'
+E, [2016-03-28T10:18:53.150095 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-03-28T10:18:53.150115 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-03-28T10:18:53.150134 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-03-28T10:18:53.150156 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-03-28T10:18:53.150175 #8058] ERROR -- default-debian-80: /home/gregf/.rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-03-28T10:18:53.150194 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-03-28T10:18:53.150215 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-03-28T10:18:53.150235 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-03-28T10:18:53.150255 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-03-28T10:18:53.150274 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-03-28T10:18:53.150336 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-03-28T10:18:53.150366 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:160:in `verify'
+E, [2016-03-28T10:18:53.150386 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:189:in `block in test'
+E, [2016-03-28T10:18:53.150405 #8058] ERROR -- default-debian-80: /home/gregf/.rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-03-28T10:18:53.150429 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/instance.rb:185:in `test'
+E, [2016-03-28T10:18:53.150449 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/command.rb:176:in `public_send'
+E, [2016-03-28T10:18:53.150470 #8058] ERROR -- default-debian-80: /home/gregf/.bundles/gregf/gems/test-kitchen-1.6.0/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2016-03-28T10:18:53.150491 #8058] ERROR -- default-debian-80: ----------------------
