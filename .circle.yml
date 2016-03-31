@@ -1,6 +1,7 @@
-ruby:
-  version:
-    - 2.3
+machine:
+  ruby:
+    version:
+      - 2.3
 test:
   override:
     - bundle exec rake travis
