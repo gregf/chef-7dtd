@@ -5,6 +5,8 @@ description       'Installs/Configures the 7 Days To Die server'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version           '0.1'
 name              '7dtd'
+issues_url        'https://github.com/gregf/chef-7dtd/issues'
+source_url        'https://github.com/gregf/chef-7dtd'
 
 recipe '7dtd', 'Installs and configures 7dtd Server'
 
